@@ -1,0 +1,261 @@
+/*Elements*/
+* {
+  box-sizing: border-box;
+  scroll-padding-top: 4.475rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: hsla(206, 100%, 95%, 1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  font-family: inherit;
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+
+/* NAV */
+
+nav {
+  width: 100%;
+  background-color: hsla(206, 100%, 85%, 0.8);
+  display: flex;
+  align-items: center;
+  height: 120px;
+  padding: 0.625rem;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+nav::after
+
+.logo {
+  width: 30%;
+}
+
+.links {
+  width: 50%;
+}
+
+.icons {
+  width: 20%;
+}
+
+.horiz-menue ul li{
+  display: inline-flex;
+  justify-content: space-around;
+  flex-flow: nowrap row;
+  width: 20%;
+}
+
+/* MAIN */
+
+.banner, .product {
+  width: 100%;
+  height: 45rem;
+  overflow: hidden;
+}
+
+.banner img, .product img  {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background-color: hsla(206, 100%, 80%, 1);
+}
+
+#company .image-container {
+  background-image: url(../images/spork-n-fork-aWBweuWlju4-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 46rem;
+  padding: 10rem;
+}
+
+#company .content {
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+#products .content, #team .image-container .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.underline {
+  display: none;
+  transition: all .2s ease-in-out;
+  color: black;
+}
+
+.product {
+  padding: 1rem;
+  display: flex;
+  width: 20rem;
+  margin: 1rem 1rem;
+  height: 20rem;
+  background-image: url(/resources/images/ishan-seefromthesky-NhJX41giJFs-unsplash.jpg);
+  background-size: cover;
+  transition: all .2s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.1); 
+  padding: 1rem;
+}
+
+.product:hover .label p{
+  color: black;
+  transition: all .2s ease-in-out;
+}
+
+.product:hover .label .underline {
+  display: inline;
+}
+
+.product:hover .label {
+  background-color: rgba(255, 255, 255, 0.80);
+  transition: all .2s ease-in-out;
+}
+
+.product:hover .label .btncontainer{
+  transition: all .2s ease-in-out;
+  display: block;
+}
+
+.label {
+  border: 2px solid hsla(206, 100%, 95%, 0.8);
+    transition: all .2s ease-in-out;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.btncontainer {
+  width: 130px;
+  height: 60px;
+  margin: 15px auto;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 65px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.btncontainer:hover {
+  color: black;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+svg rect {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-dasharray: 400, 0;
+  -webkit-transition: all 0.8s ease-in-out;
+}
+
+.btncontainer:hover svg rect {
+  stroke-width: 3;
+  stroke: #000000;
+  stroke-dasharray: 35, 245;
+  stroke-dashoffset: 38;
+  -webkit-transition: all 0.8s ease-in-out;
+}
+
+
+
+.label p {
+  color: white;
+  font-weight: bold;
+}
+
+.team-member {
+  padding: 1rem;
+  display: flex;
+  width: 25rem;
+  margin: 1rem 1rem;
+  height: 30rem;
+  background-image: url(/resources/images/nadine-primeau-xLskrI8Dw68-unsplash.jpg);
+  background-size: cover;
+  transition: all .2s ease-in-out;
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: hsla(206, 100%, 80%, 1);
+  height: 150px;
+}
